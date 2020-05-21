@@ -12,8 +12,8 @@ namespace RentDynamics.DotNet.Common
     public class ApiService
     {
         protected string _url = "https://api-dev.rentdynamics.com";
-        protected string _apiKey = "490efa56-d";
-        protected string _apiSecretKey = "1478aff2-977f-4831-8";
+        protected string _apiKey = "myapikey";
+        protected string _apiSecretKey = "myapisecretkey";
         protected bool _isProd = false;
 
         public ApiService() 

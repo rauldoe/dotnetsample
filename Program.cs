@@ -15,6 +15,10 @@ namespace RentDynamics.DotNet
             int adSourceId = 4085;
             // This represents the maximum number of days available for available dates
             int numberOfAvailableDays = 90-1;
+            string url = "https://api-dev.rentdynamics.com";
+            string apiKey = "myapikey";
+            string apiSecretKey = "myapisecretkey";
+            bool isProd = false;
 
             DateTime dateOfInterest = DateTime.Parse("05/21/2020").Date;
             DateTime moveDate = DateTime.Parse("2020-07-01").Date;
@@ -28,7 +32,7 @@ namespace RentDynamics.DotNet
             string phoneNumber = "7145958867";
             string note = "Note text";
 
-            var api = new ApiService();
+            var api = new ApiService(url, apiKey, apiSecretKey, isProd);
 
             var start = DateTime.Now.Date;
             var end = (start.AddDays(numberOfAvailableDays)).Date;
